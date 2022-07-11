@@ -1,0 +1,21 @@
+.pimg {
+  background: linear-gradient(rgba(148, 66, 254, 0.2), rgba(51, 120, 255, 0.3)),
+    url("/public/assets/images/01.jpg");
+  background-size: cover;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  /* right: 20px; */
+  font-size: 100px;
+  /* background: orange; */
+  /* color: white; */
+  cursor: pointer;
+  /* border-radius: 100px; */
+  /* border: none; */
+  /* box-shadow: 0 5px 10px #ccc; */
+}
+
+/* .back-to-top:hover {
+  background: red;
+} */
