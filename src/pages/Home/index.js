@@ -23,7 +23,7 @@ const Index = () => {
               style={{ border: "2px solid #3378ff", width: "7rem" }}
             />
             <Typography className="pt-10">
-              Hi, I'm a full-stack developer and also photography.
+              Hi, I'm Eve. I'm a full-stack developer and also photography.
             </Typography>
             <Typography>Welcome to my portfolio !</Typography>
           </Box>

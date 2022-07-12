@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import TextHead from "./TextHead";
 import MiniBoxPho from "./MiniBoxPho";
 import SeeAll from "./SeeAll";
+import { Link } from "react-router-dom";
 
 const Pho = () => {
   return (
@@ -38,7 +39,9 @@ const Pho = () => {
             </Box>
           </Box>
         </Box>
-        <SeeAll />
+        <Link to="/work">
+          <SeeAll />
+        </Link>
       </Box>
     </Box>
   );

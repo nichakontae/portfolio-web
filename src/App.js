@@ -5,8 +5,7 @@ import Navbar from "./components/Navbar";
 import { Box, Typography } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Pro from "./pages/Home/Pro";
-import Pho from "./pages/Home/Pho";
+import About from "./pages/about";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
@@ -50,6 +49,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
         {/* <Pho /> */}
       </Routes>
       {showButton && (

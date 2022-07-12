@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import TextHead from "./TextHead";
 import BoxPro from "./BoxPro";
 import SeeAll from "./SeeAll";
+import { Link } from "react-router-dom";
 
 const Pro = () => {
   return (
@@ -30,7 +31,9 @@ const Pro = () => {
               <BoxPro />
               <BoxPro />
             </Box>
-            <SeeAll />
+            <Link to="/work">
+              <SeeAll />
+            </Link>
           </Box>
         </Box>
       </Box>

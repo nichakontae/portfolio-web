@@ -13,7 +13,8 @@ const Footer = () => {
     >
       <Box>
         <Typography>
-          &copy; 2022 nnch. &nbsp; &nbsp;ALL RIGHTS RESERVED.
+          &copy; 2022 nnch. &nbsp; &nbsp;
+          <span className="md:inline hidden">ALL RIGHTS RESERVED.</span>
         </Typography>
       </Box>
       {/* <Box className="flex flex-row  cursor-pointer ">
