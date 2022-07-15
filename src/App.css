@@ -1,6 +1,5 @@
 .pimg {
-  background: linear-gradient(rgba(148, 66, 254, 0.2), rgba(51, 120, 255, 0.3)),
-    url("/public/assets/images/01.jpg");
+  background: url("/public/assets/images/01.jpg");
   background-size: cover;
 }
 .back-to-top {

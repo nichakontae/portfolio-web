@@ -52,10 +52,11 @@ function App() {
         <Route exact path="/about" element={<About />} />
         {/* <Pho /> */}
       </Routes>
+      <Footer />
       {showButton && (
         <Box
           onClick={scrollToTop}
-          className="back-to-top flex flex-row justify-center cursor-pointer gap-x-[1rem]"
+          className="back-to-top flex flex-row justify-center cursor-pointer gap-x-[1rem] z-1000"
           sx={{ width: "100vw" }}
         >
           <svg
@@ -73,7 +74,6 @@ function App() {
           <Typography>BACK TO TOP</Typography>
         </Box>
       )}
-      <Footer />
     </ThemeProvider>
   );
 }

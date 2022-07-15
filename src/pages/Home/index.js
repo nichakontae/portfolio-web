@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <>
       <Box
-        className="grid grid-cols-2  items-center"
+        className="grid grid-cols-2 items-center"
         sx={{
           height: "100%",
           width: "100%",
