@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import TextHead from "./TextHead";
 import BoxPro from "./BoxPro";
 import SeeAll from "./SeeAll";

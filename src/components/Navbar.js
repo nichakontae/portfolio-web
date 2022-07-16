@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { Button, Modal } from "@mui/material";
+import { Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 import React, { useState } from "react";
@@ -71,7 +71,7 @@ const Navbar = () => {
         sx={{ height: "100%" }}
       >
         <Link to="/">
-          <Typography className="md:block pl-8" variant="h4">
+          <Typography className="pl-8" variant="h4">
             nnch.
           </Typography>
         </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
             </Link>
           </Stack>
         </Box>
-        <Box className="md:block hidden">
+        <Box className="md:block hidden pr-8">
           {/* <Link to="/contact"> */}
           <Typography onClick={handleOpen} className="cursor-pointer">
             Contact

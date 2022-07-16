@@ -11,7 +11,7 @@ const Footer = () => {
       className="flex flex-row justify-between items-center"
       sx={{ padding: "0rem calc((100vw - 1800px) / 2)", height: "5rem" }}
     >
-      <Box>
+      <Box className="pl-8">
         <Typography>
           &copy; 2022 nnch. &nbsp; &nbsp;
           <span className="md:inline hidden">ALL RIGHTS RESERVED.</span>
@@ -32,7 +32,7 @@ const Footer = () => {
         </svg>
         <Typography>BACK TO TOP</Typography>
       </Box> */}
-      <Box className="flex flex-row gap-x-[1.5rem]">
+      <Box className="flex flex-row md:gap-x-[1.5rem] gap-x-[0.5rem] pr-8">
         <EmailIcon className="cursor-pointer" />
         <FacebookIcon className="cursor-pointer" />
         <GitHubIcon className="cursor-pointer" />
