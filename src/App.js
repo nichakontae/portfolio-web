@@ -1,11 +1,13 @@
 import "./App.css";
-
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Navbar from "./components/Navbar";
 import { Box, Typography } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/about";
+import Work from "./pages/Work";
+import Project from "./pages/Project";
+import Photography from "./pages/Photography";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
@@ -50,13 +52,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/work" element={<Work />} />
+        <Route exact path="/project" element={<Project />} />
+        <Route exact path="/photography" element={<Photography />} />
+
         {/* <Pho /> */}
       </Routes>
       <Footer />
       {showButton && (
         <Box
           onClick={scrollToTop}
-          className="back-to-top flex flex-row justify-center cursor-pointer gap-x-[1rem] z-1000"
+          className="back-to-top flex flex-row justify-center cursor-pointer gap-x-[1rem]"
           sx={{ width: "100vw" }}
         >
           <svg

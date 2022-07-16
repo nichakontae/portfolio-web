@@ -86,7 +86,7 @@ const Navbar = () => {
             <Link to="/project">
               <Typography className="p-4">Project</Typography>
             </Link>
-            <Link to="/typography">
+            <Link to="/photography">
               <Typography className="p-4">Photography</Typography>
             </Link>
             <Link to="/about">

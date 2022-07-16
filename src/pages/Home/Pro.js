@@ -4,6 +4,7 @@ import TextHead from "./TextHead";
 import BoxPro from "./BoxPro";
 import SeeAll from "./SeeAll";
 import { Link } from "react-router-dom";
+import { projects } from "../../shared/projects";
 
 const Pro = () => {
   return (
@@ -27,9 +28,18 @@ const Pro = () => {
 
           <Box>
             <Box className="grid md:grid-cols-3 mb-[5rem]">
-              <BoxPro />
-              <BoxPro />
-              <BoxPro />
+              {projects
+                .filter((e) => {
+                  return e.id <= 2;
+                })
+                .map((el) => (
+                  <BoxPro
+                    name={el.name}
+                    source={el.source}
+                    type={el.type}
+                    horizontal={el.horizontal}
+                  />
+                ))}
             </Box>
             <Link to="/work">
               <SeeAll />
