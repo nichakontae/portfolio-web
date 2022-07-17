@@ -58,7 +58,7 @@ const Pho = () => {
             </Box>
 
             <Box>
-              <Box className="flex md:flex-row flex-col md:gap-x-[2rem]">
+              <Box className="flex md:flex-row flex-col md:gap-x-[2rem] overflow-hidden">
                 {photos
                   .filter((el) => {
                     return el.id > 0 && el.id < 3;
@@ -67,7 +67,7 @@ const Pho = () => {
                     <MiniBoxPho source={ml.source} name={ml.name} />
                   ))}
               </Box>
-              <Box className="flex md:flex-row flex-col md:gap-x-[2rem]">
+              <Box className="flex md:flex-row flex-col md:gap-x-[2rem] overflow-hidden">
                 {photos
                   .filter((el) => {
                     return el.id > 2 && el.id < 5;
@@ -81,7 +81,7 @@ const Pho = () => {
         </Box>
       </Box>
       <Box className="pr-8 pl-8">
-        <Link to="/work">
+        <Link to="/photography">
           <SeeAll />
         </Link>
       </Box>

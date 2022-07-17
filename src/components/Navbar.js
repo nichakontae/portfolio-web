@@ -5,20 +5,47 @@ import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Fig from "../pages/Fig";
+import "../App.css";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   const click = () => {
     setToggle(!toggle);
   };
+  const closeMenu = () => {
+    setToggle(false);
+  };
   const showToggle = (el) => {
     if (el === true) {
       return (
+        // cancel icon
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      );
+    } else {
+      return (
+        // menu icon
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -34,124 +61,122 @@ const Navbar = () => {
           />
         </svg>
       );
-    } else {
-      return (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clipRule="evenodd"
-          />
-        </svg>
-      );
     }
   };
-
   return (
     <Box
-      className="fixed"
+      className="fixed bg-gradient-to-r from-[#3378ff] to-[#9442fe]"
       sx={{
         width: "100%",
         height: "60px",
         padding: "0rem calc((100vw - 1700px) / 2)",
-        background: "transparent",
-        backdropFilter: "blur(1rem)",
+        // background: "#3378ff",
+        // backdropFilter: "blur(1rem)",
         zIndex: "100",
+        // color: "white",
       }}
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ height: "100%" }}
-      >
-        <Link to="/">
-          <Typography className="pl-8" variant="h4">
-            nnch.
-          </Typography>
-        </Link>
-        <Box className="px-8 cursor-pointer md:hidden" onClick={click}>
-          {showToggle(toggle)}
-        </Box>
-        <Box className="md:block hidden">
-          <Stack direction="row">
-            <Link to="/work">
-              <Typography className="p-4">Work</Typography>
+      <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ height: "100%" }}
+        >
+          <Link to="/">
+            <Typography className="pl-8" variant="h4" onClick={closeMenu}>
+              nnch.
+            </Typography>
+          </Link>
+          <Box className="px-8 cursor-pointer md:hidden" onClick={click}>
+            {showToggle(toggle)}
+            {/* <Box className={toggle ? "menu active" : "menu"}></Box> */}
+          </Box>
+          <Box className={toggle ? "menu active" : "menu"}>
+            {/* <Stack direction="row"> */}
+            <Link to="/work" onClick={closeMenu}>
+              <Typography className="p-4 nav-link">Work</Typography>
             </Link>
-            <Link to="/project">
-              <Typography className="p-4">Project</Typography>
+            <Link to="/project" onClick={closeMenu}>
+              <Typography className="p-4 nav-link">Project</Typography>
             </Link>
-            <Link to="/photography">
-              <Typography className="p-4">Photography</Typography>
+            <Link to="/photography" onClick={closeMenu}>
+              <Typography className="p-4 nav-link">Photography</Typography>
             </Link>
-            <Link to="/about">
-              <Typography className="p-4">About</Typography>
+            <Link to="/about" onClick={closeMenu}>
+              <Typography className="p-4 nav-link">About</Typography>
             </Link>
-          </Stack>
-        </Box>
-        <Box className="md:block hidden pr-8">
-          {/* <Link to="/contact"> */}
-          <Typography onClick={handleOpen} className="cursor-pointer">
-            Contact
-          </Typography>
-          {/* </Link> */}
+            {/* </Stack> */}
+            <Box className="nav-link-mobile">
+              <EmailIcon className="cursor-pointer icon" />
+              <FacebookIcon className="cursor-pointer icon" />
+              <InstagramIcon className="cursor-pointer icon" />
+              <GitHubIcon className="cursor-pointer icon" />
+            </Box>
+          </Box>
 
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box
-              className="bg-gradient-to-r from-[#3378ff] to-[#9442fe]"
-              sx={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "95%",
-                height: "90%",
-
-                // boxShadow: 10,
-                p: 4,
-                "&:focus": {
-                  outline: "none",
-                },
-              }}
+          <Box className="md:block hidden pr-8">
+            {/* <Link to="/contact"> */}
+            <Typography
+              onClick={handleOpen}
+              className="cursor-pointer nav-link"
             >
-              <CloseIcon
-                onClick={handleClose}
-                className="cursor-pointer absolute right-10 z-10"
-              />
+              Contact
+            </Typography>
+            {/* </Link> */}
 
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
               <Box
-                className="flex flex-col justify-center items-center gap-y-[3rem] md:relative md:top-[-1rem]"
-                sx={{ height: "100%" }}
+                className="bg-gradient-to-r from-[#3378ff] to-[#9442fe]"
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "95%",
+                  height: "90%",
+
+                  // boxShadow: 10,
+                  p: 4,
+                  "&:focus": {
+                    outline: "none",
+                  },
+                }}
               >
-                <Box className="flex flex-col items-center">
-                  <Typography>contact</Typography>
-                  <Typography
-                    variant="h1"
-                    className="cursor-pointer transition ease-in-out delay-100 no-underline hover:text-white hover:underline duration-300"
-                  >
-                    hello@nnch.co
-                  </Typography>
-                </Box>
-                <Box className="flex gap-x-[5rem] md:relative md:top-[10rem]">
-                  <Fig text="facebook" />
-                  <Fig text="instagram" />
-                  <Fig text="github" />
+                <CloseIcon
+                  onClick={handleClose}
+                  className="cursor-pointer absolute right-10 z-10"
+                />
+
+                <Box
+                  className="flex flex-col justify-center items-center gap-y-[3rem] md:relative md:top-[-1rem]"
+                  sx={{ height: "100%" }}
+                >
+                  <Box className="flex flex-col items-center">
+                    <Typography>contact</Typography>
+                    <Typography
+                      variant="h1"
+                      className="cursor-pointer transition ease-in-out delay-100 no-underline hover:text-white hover:underline duration-300"
+                    >
+                      hello@nnch.co
+                    </Typography>
+                  </Box>
+                  <Box className="flex gap-x-[5rem] md:relative md:top-[10rem]">
+                    <Fig text="facebook" />
+                    <Fig text="instagram" />
+                    <Fig text="github" />
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          </Modal>
-        </Box>
-      </Stack>
+            </Modal>
+          </Box>
+        </Stack>
+      </Box>
     </Box>
   );
 };

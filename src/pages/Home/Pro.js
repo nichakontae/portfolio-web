@@ -41,7 +41,7 @@ const Pro = () => {
                   />
                 ))}
             </Box>
-            <Link to="/work">
+            <Link to="/project">
               <SeeAll />
             </Link>
           </Box>

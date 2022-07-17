@@ -10,6 +10,7 @@ import Project from "./pages/Project";
 import Photography from "./pages/Photography";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
+import DropDown from "./components/DropDown";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -49,6 +50,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
+      {/* <DropDown /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
