@@ -7,13 +7,19 @@ import Home from "./pages/Home";
 import About from "./pages/about";
 import Work from "./pages/Work";
 import Project from "./pages/Project";
-import Photography from "./pages/Photography";
+import Photography from "./pages/Photography/Photography";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
-import DropDown from "./components/DropDown";
+import PhotoPost from "./components/PhotoPost";
 
 function App() {
+  // const [selectPhoto, setSelectPhoto] = useState(null);
   const [showButton, setShowButton] = useState(false);
+
+  // let photoPost = null;
+  // if (!!selectPhoto) {
+  //   photoPost = <PhotoPost photo={selectPhoto} />;
+  // }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -49,16 +55,14 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
-      {/* <DropDown /> */}
+      <Navbar onLogoClick={scrollToTop} />
+      {/* <PhotoPost /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/work" element={<Work />} />
         <Route exact path="/project" element={<Project />} />
         <Route exact path="/photography" element={<Photography />} />
-
-        {/* <Pho /> */}
       </Routes>
       <Footer />
       {showButton && (

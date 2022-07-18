@@ -11,7 +11,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 
-const Navbar = () => {
+const Navbar = (onLogoClick) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -83,7 +83,7 @@ const Navbar = () => {
           justifyContent="space-between"
           sx={{ height: "100%" }}
         >
-          <Link to="/">
+          <Link to="/" onClick={onLogoClick}>
             <Typography className="pl-8" variant="h4" onClick={closeMenu}>
               nnch.
             </Typography>

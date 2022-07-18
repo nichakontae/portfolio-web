@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { photos } from "../../shared/photos";
 import BoxForWork from "../BoxForWork";
 import { Box, Typography } from "@mui/material";
+import PhotoPost from "../../components/PhotoPost";
 
-const index = () => {
+const Photography = () => {
+  const [selectPhoto, setSelectPhoto] = useState(null);
+
+  const onPhotoCloseClick = () => {
+    setSelectPhoto(null);
+  };
+  const onPhotoClick = (photo) => {
+    setSelectPhoto(photo);
+  };
+
+  let photoPost = null;
+  if (!!selectPhoto) {
+    photoPost = <PhotoPost photo={selectPhoto} onBgClick={onPhotoCloseClick} />;
+  }
+
   return (
     <>
       <Box
@@ -27,18 +42,13 @@ const index = () => {
       <Box className="pl-8 pt-5 pr-8 mb-[5rem] flex flex-col justify-center items-center">
         <Box className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-x-[3rem] gap-y-[3rem] ">
           {photos.map((ml) => (
-            <BoxForWork
-              key={ml.id}
-              name={ml.name}
-              source={ml.source}
-              type={ml.type}
-              horizontal={ml.horizontal}
-            />
+            <BoxForWork key={ml.id} photo={ml} onPhotoClick={onPhotoClick} />
           ))}
         </Box>
+        <Box>{photoPost}</Box>
       </Box>
     </>
   );
 };
 
-export default index;
+export default Photography;

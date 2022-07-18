@@ -1,0 +1,63 @@
+.photo-post {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-post-bg {
+  background: transparent;
+  backdrop-filter: blur(4rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.photo-post-content {
+  position: relative;
+  /* put relative then the picture at the in front of bg??? */
+  max-width: 70rem;
+  background: linear-gradient(
+    90deg,
+    rgb(51, 120, 255) 0%,
+    rgb(148, 66, 254) 100%
+  );
+  border-radius: 10px;
+}
+
+.photo-post-content img {
+  border-radius: 10px 10px 0 0;
+  max-height: calc(100vh - 120px);
+}
+.photo-post-content .text {
+  text-align: center;
+  padding: 1rem;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20rem;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20rem;
+}
+.app-icon {
+  transform: scale(1.5);
+  position: absolute;
+  bottom: -3rem;
+  cursor: pointer;
+  user-select: none;
+}
