@@ -4,20 +4,20 @@ import BoxForWork from "../BoxForWork";
 import { Box, Typography } from "@mui/material";
 import PhotoPost from "../../components/PhotoPost";
 
-const Photography = () => {
-  const [selectPhoto, setSelectPhoto] = useState(null);
+const Photography = ({ onPhotoClick }) => {
+  // const [selectPhoto, setSelectPhoto] = useState(null);
 
-  const onPhotoCloseClick = () => {
-    setSelectPhoto(null);
-  };
-  const onPhotoClick = (photo) => {
-    setSelectPhoto(photo);
-  };
+  // const onPhotoCloseClick = () => {
+  //   setSelectPhoto(null);
+  // };
+  // const onPhotoClick = (photo) => {
+  //   setSelectPhoto(photo);
+  // };
 
-  let photoPost = null;
-  if (!!selectPhoto) {
-    photoPost = <PhotoPost photo={selectPhoto} onBgClick={onPhotoCloseClick} />;
-  }
+  // let photoPost = null;
+  // if (!!selectPhoto) {
+  //   photoPost = <PhotoPost photo={selectPhoto} onBgClick={onPhotoCloseClick} />;
+  // }
 
   return (
     <>
@@ -45,7 +45,6 @@ const Photography = () => {
             <BoxForWork key={ml.id} photo={ml} onPhotoClick={onPhotoClick} />
           ))}
         </Box>
-        <Box>{photoPost}</Box>
       </Box>
     </>
   );

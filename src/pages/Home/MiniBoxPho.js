@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-const MiniBoxPho = ({ source, name, horizontal }) => {
+const MiniBoxPho = ({ photo, onClick }) => {
   return (
     <Box
       className="mb-5 cursor-pointer transition ease-in-out delay-150 hover:shadow-xs duration-300  bg-gradient-to-r from-[#a0bef8] to-[#b5f0f0]"
@@ -12,12 +12,15 @@ const MiniBoxPho = ({ source, name, horizontal }) => {
         borderRadius: "2rem",
         overflow: "hidden",
       }}
+      onClick={() => {
+        onClick(photo);
+      }}
     >
       <img
-        src={source}
-        alt={name}
+        src={photo.source}
+        alt={photo.name}
         style={{
-          transform: horizontal ? "scale(2)" : "scale(3)",
+          transform: photo.horizontal ? "scale(2)" : "scale(3)",
         }}
       />
     </Box>

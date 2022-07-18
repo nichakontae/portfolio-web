@@ -14,15 +14,19 @@ const index = () => {
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
-          <Box className="grid md:grid-cols-[1fr_2fr] gap-x-[10rem] gap-y-[3rem]">
+          <Box className="grid grid-rows-[1fr_0.5fr] lg:grid-cols-[1fr_2fr] lg:gap-x-[1.5rem] xl:gap-x-[6rem] lg:gap-y-[3rem]">
             <Box
               sx={{ borderRadius: "1rem" }}
               className="overflow-hidden shadow-xl"
             >
-              <img src="assets/images/03.jpg" alt="eve" />
+              <img
+                src="assets/images/03.jpg"
+                alt="eve"
+                style={{ transform: "scale(1.3)" }}
+              />
             </Box>
             <Box
-              className="md:pr-[10rem] flex items-center"
+              className="md:pr-[4rem] lg:pr-[3rem] xl:pr-[10rem] flex items-center pt-5"
               sx={{ height: "100%" }}
             >
               <Box>
@@ -51,9 +55,6 @@ const index = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
                   </Typography>
                 </Box>
               </Box>

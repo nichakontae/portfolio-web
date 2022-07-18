@@ -27,13 +27,7 @@ const index = () => {
       <Box className="pl-8 pt-5 pr-8 mb-[5rem] flex flex-col justify-center items-center">
         <Box className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-x-[3rem] gap-y-[3rem] ">
           {projects.map((el) => (
-            <BoxForWork
-              key={el.id}
-              name={el.name}
-              source={el.source}
-              type={el.type}
-              horizontal={el.horizontal}
-            />
+            <BoxForWork key={el.id} photo={el} />
           ))}
         </Box>
       </Box>

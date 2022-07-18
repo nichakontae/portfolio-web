@@ -27,13 +27,14 @@ const Pro = () => {
           <TextHead text="Project" />
 
           <Box>
-            <Box className="grid md:grid-cols-3 mb-[5rem]">
+            <Box className="grid  md:grid-cols-3 mb-[5rem]">
               {projects
                 .filter((e) => {
                   return e.id <= 2;
                 })
                 .map((el) => (
                   <BoxPro
+                    key={el.id}
                     name={el.name}
                     source={el.source}
                     type={el.type}

@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import Pro from "./Pro";
 import Pho from "./Pho";
 
-const Index = () => {
+const Index = ({ onPhotoClick }) => {
   return (
     <>
       <Box
@@ -72,7 +72,7 @@ const Index = () => {
         <Pro />
       </Box>
       <Box>
-        <Pho />
+        <Pho onPhotoClick={onPhotoClick} />
       </Box>
     </>
   );

@@ -17,7 +17,7 @@ const BoxPro = ({ name, source, type, horizontal }) => {
           alt={name}
           // className="scale-[1]"
           style={{
-            transform: horizontal ? "scale(2)" : "scale(3)",
+            transform: horizontal ? "scale(3.6)" : "scale(3)",
           }}
         />
       </Box>

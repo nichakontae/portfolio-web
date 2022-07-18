@@ -94,9 +94,9 @@ const Navbar = (onLogoClick) => {
           </Box>
           <Box className={toggle ? "menu active" : "menu"}>
             {/* <Stack direction="row"> */}
-            <Link to="/work" onClick={closeMenu}>
+            {/* <Link to="/work" onClick={closeMenu}>
               <Typography className="p-4 nav-link">Work</Typography>
-            </Link>
+            </Link> */}
             <Link to="/project" onClick={closeMenu}>
               <Typography className="p-4 nav-link">Project</Typography>
             </Link>

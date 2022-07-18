@@ -13,13 +13,20 @@ import { useState, useEffect } from "react";
 import PhotoPost from "./components/PhotoPost";
 
 function App() {
-  // const [selectPhoto, setSelectPhoto] = useState(null);
   const [showButton, setShowButton] = useState(false);
+  const [selectPhoto, setSelectPhoto] = useState(null);
 
-  // let photoPost = null;
-  // if (!!selectPhoto) {
-  //   photoPost = <PhotoPost photo={selectPhoto} />;
-  // }
+  const onPhotoCloseClick = () => {
+    setSelectPhoto(null);
+  };
+  const onPhotoClick = (photo) => {
+    setSelectPhoto(photo);
+  };
+
+  let photoPost = null;
+  if (!!selectPhoto) {
+    photoPost = <PhotoPost photo={selectPhoto} onBgClick={onPhotoCloseClick} />;
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -56,13 +63,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar onLogoClick={scrollToTop} />
-      {/* <PhotoPost /> */}
+      {photoPost}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home onPhotoClick={onPhotoClick} />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/work" element={<Work />} />
+        {/* <Route exact path="/work" element={<Work />} /> */}
         <Route exact path="/project" element={<Project />} />
-        <Route exact path="/photography" element={<Photography />} />
+        <Route
+          exact
+          path="/photography"
+          element={<Photography onPhotoClick={onPhotoClick} />}
+        />
       </Routes>
       <Footer />
       {showButton && (

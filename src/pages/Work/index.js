@@ -3,6 +3,7 @@ import React from "react";
 import { projects } from "../../shared/projects";
 import { photos } from "../../shared/photos";
 import BoxForWork from "../BoxForWork";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
@@ -28,22 +29,14 @@ const index = () => {
       <Box className="pl-8 pt-5 pr-8 mb-[5rem] flex flex-col justify-center items-center">
         <Box className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-x-[3rem] gap-y-[3rem] ">
           {projects.map((el) => (
-            <BoxForWork
-              key={el.id}
-              name={el.name}
-              source={el.source}
-              type={el.type}
-              horizontal={el.horizontal}
-            />
+            <Link to="/project">
+              <BoxForWork key={el.id} photo={el} />
+            </Link>
           ))}
           {photos.map((ml) => (
-            <BoxForWork
-              key={ml.id}
-              name={ml.name}
-              source={ml.source}
-              type={ml.type}
-              horizontal={ml.horizontal}
-            />
+            <Link to="/photography">
+              <BoxForWork key={ml.id} photo={ml} />
+            </Link>
           ))}
         </Box>
       </Box>
