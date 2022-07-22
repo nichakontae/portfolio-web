@@ -1,18 +1,24 @@
+.app {
+  background-color: #f7f7f7;
+}
 .pimg {
   background: url("/public/assets/images/01.jpg");
   background-size: cover;
 }
 .back-to-top {
   position: fixed;
-  bottom: 28px;
-  /* right: 20px; */
+  bottom: 70px;
+  right: 20px;
   font-size: 100px;
-  /* background: orange; */
+  background: #eed5d1;
   /* color: white; */
   cursor: pointer;
-  /* border-radius: 100px; */
-  /* border: none; */
+  border-radius: 100px;
+  /* border: 1px solid #e5b9b6; */
   /* box-shadow: 0 5px 10px #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .back-to-top:hover {
@@ -26,22 +32,69 @@
 }
 .nav-link:hover {
   /* border-bottom: 3px solid white; */
-  color: white;
+  color: #e5b9b6;
   transition: all 0.2s ease-out;
 }
 .nav-link-mobile {
   display: none;
+}
+.nav-link-footer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, auto);
+}
+.icon:hover {
+  color: #e5b9b6;
+  transition: all 0.3s ease-out;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  border-radius: 10px 10px 0 0;
+  max-height: calc(100vh - 120px);
+}
+.left {
+  position: absolute;
+  top: 50%;
+  /* left: -60px; */
+  left: 32px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 3rem;
+  color: black;
+}
+.right {
+  position: absolute;
+  top: 50%;
+  /* right: -60px; */
+  right: 32px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 3rem;
+  color: black;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.01);
 }
 @media screen and (max-width: 768px) {
   .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(
-      90deg,
-      rgb(51, 120, 255) 0%,
-      rgb(148, 66, 254) 100%
-    );
+    background-color: #f7f7f7;
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -58,7 +111,7 @@
   .nav-link:hover {
     text-align: center;
     width: 100vw;
-    background-color: #f7f7f7;
+    background-color: #eed5d1;
     color: black;
     transition: all 0.3s ease-out;
   }
@@ -68,7 +121,7 @@
     grid-template-columns: repeat(4, auto);
   }
   .icon:hover {
-    color: white;
+    color: #e5b9b6;
     transition: all 0.3s ease-out;
   }
 }

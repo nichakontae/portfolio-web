@@ -4,12 +4,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
+import "../App.css";
 
 const Footer = () => {
   return (
     <Box
       className="flex flex-row justify-between items-center"
-      sx={{ padding: "0rem calc((100vw - 1800px) / 2)", height: "5rem" }}
+      sx={{
+        padding: "0rem calc((100vw - 1800px) / 2)",
+        height: "5rem",
+        backgroundColor: "#f7f7f7",
+      }}
     >
       <Box className="pl-8">
         <Typography>
@@ -32,11 +37,11 @@ const Footer = () => {
         </svg>
         <Typography>BACK TO TOP</Typography>
       </Box> */}
-      <Box className="flex flex-row md:gap-x-[1.5rem] gap-x-[0.5rem] pr-8">
-        <EmailIcon className="cursor-pointer" />
-        <FacebookIcon className="cursor-pointer" />
-        <GitHubIcon className="cursor-pointer" />
-        <InstagramIcon className="cursor-pointer" />
+      <Box className="nav-link-footer pr-8">
+        <EmailIcon className="cursor-pointer icon" />
+        <FacebookIcon className="cursor-pointer icon" />
+        <GitHubIcon className="cursor-pointer icon" />
+        <InstagramIcon className="cursor-pointer icon" />
       </Box>
     </Box>
   );

@@ -26,16 +26,16 @@ const Photography = ({ onPhotoClick }) => {
           //   height: { xs: "100% ", lg: "100vh" },
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          // backgroundColor: "#f7f7f7",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
-          <Typography variant="h3" sx={{ color: "#3378ff" }}>
+          <Typography variant="h3" sx={{ color: "black" }}>
             Photography
           </Typography>
           <hr
             className="mt-3"
-            style={{ border: "2px solid black", width: "7rem" }}
+            style={{ border: "2px solid #aad0d9", width: "7rem" }}
           />
         </Box>
       </Box>

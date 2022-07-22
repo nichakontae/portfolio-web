@@ -6,13 +6,13 @@ import SeeAll from "./SeeAll";
 import { Link } from "react-router-dom";
 import { projects } from "../../shared/projects";
 
-const Pro = () => {
+const Pro = ({ onButtonClick }) => {
   return (
     <>
       <Box className="md:relative -z-10">
         <Box
           className="md:block hidden md:absolute md:top-[19rem]"
-          sx={{ backgroundColor: "#D9D9D9", width: "100%", height: "21rem" }}
+          sx={{ backgroundColor: "#eed5d1", width: "100%", height: "21rem" }}
         ></Box>
       </Box>
       <Box
@@ -20,7 +20,7 @@ const Pro = () => {
           height: { xs: "100%", lg: "100vh" },
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          // backgroundColor: "#f7f7f7",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
@@ -43,7 +43,7 @@ const Pro = () => {
                 ))}
             </Box>
             <Link to="/project">
-              <SeeAll />
+              <SeeAll onButtonClick={onButtonClick} />
             </Link>
           </Box>
         </Box>

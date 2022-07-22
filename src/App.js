@@ -5,12 +5,13 @@ import { Box, Typography } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/about";
-import Work from "./pages/Work";
 import Project from "./pages/Project";
 import Photography from "./pages/Photography/Photography";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 import PhotoPost from "./components/PhotoPost";
+import ImageSlider from "./components/ImageSlider";
+import { photos } from "./shared/photos";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -61,43 +62,50 @@ function App() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
-      <Navbar onLogoClick={scrollToTop} />
-      {photoPost}
-      <Routes>
-        <Route path="/" element={<Home onPhotoClick={onPhotoClick} />} />
-        <Route exact path="/about" element={<About />} />
-        {/* <Route exact path="/work" element={<Work />} /> */}
-        <Route exact path="/project" element={<Project />} />
-        <Route
-          exact
-          path="/photography"
-          element={<Photography onPhotoClick={onPhotoClick} />}
-        />
-      </Routes>
-      <Footer />
-      {showButton && (
-        <Box
-          onClick={scrollToTop}
-          className="back-to-top flex flex-row justify-center cursor-pointer gap-x-[1rem]"
-          sx={{ width: "100vw" }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 "
-            viewBox="0 0 20 20"
-            fill="currentColor"
+    <div className="app">
+      <ThemeProvider theme={theme}>
+        <Navbar onLogoClick={scrollToTop} />
+        {/* <ImageSlider photoLength={photos} /> */}
+        {photoPost}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home onPhotoClick={onPhotoClick} onButtonClick={scrollToTop} />
+            }
+          />
+          <Route exact path="/about" element={<About />} />
+          {/* <Route exact path="/work" element={<Work />} /> */}
+          <Route exact path="/project" element={<Project />} />
+          <Route
+            exact
+            path="/photography"
+            element={<Photography onPhotoClick={onPhotoClick} />}
+          />
+        </Routes>
+        <Footer />
+        {showButton && (
+          <Box
+            onClick={scrollToTop}
+            className="back-to-top"
+            sx={{ width: "3rem", height: "3rem" }}
           >
-            <path
-              fillRule="evenodd"
-              d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <Typography>BACK TO TOP</Typography>
-        </Box>
-      )}
-    </ThemeProvider>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 "
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </Box>
+        )}
+      </ThemeProvider>
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ const Circle = ({ path, name }) => {
         className="absolute left-[8rem] top-[1rem] shadow-xl z-10"
       />
       <Box
-        className="bg-gradient-to-r from-[#3378ff] to-[#9442fe] mb-[4rem] opacity-50"
+        className="bg-[#aad0d9] mb-[4rem] opacity-50"
         sx={{ width: "20rem", height: "20rem", borderRadius: "10rem" }}
       ></Box>
     </Box>

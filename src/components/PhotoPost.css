@@ -10,8 +10,9 @@
   align-items: center;
 }
 .photo-post-bg {
-  background: transparent;
-  backdrop-filter: blur(4rem);
+  /* background: transparent;
+  backdrop-filter: blur(4rem); */
+  background-color: rgba(0, 0, 0, 0.564);
   position: absolute;
   top: 0;
   left: 0;
@@ -23,11 +24,7 @@
   /* put relative then the picture at the in front of bg??? */
   /* max-width: 70rem; */
   max-width: 25rem;
-  background: linear-gradient(
-    90deg,
-    rgb(51, 120, 255) 0%,
-    rgb(148, 66, 254) 100%
-  );
+  background-color: #aad0d9;
   border-radius: 10px;
 }
 
@@ -40,7 +37,7 @@
   padding: 1rem;
 }
 .left-arrow {
-  /* color: white; */
+  color: white;
   position: absolute;
   top: 50%;
   /* left: -60px; */
@@ -50,7 +47,7 @@
   font-size: 20rem;
 }
 .right-arrow {
-  /* color: white; */
+  color: white;
   position: absolute;
   top: 50%;
   /* right: -60px; */

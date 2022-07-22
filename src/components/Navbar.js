@@ -65,13 +65,14 @@ const Navbar = (onLogoClick) => {
   };
   return (
     <Box
-      className="fixed bg-gradient-to-r from-[#3378ff] to-[#9442fe]"
+      className="fixed"
       sx={{
         width: "100%",
         height: "60px",
         padding: "0rem calc((100vw - 1700px) / 2)",
         // background: "#3378ff",
         // backdropFilter: "blur(1rem)",
+        backgroundColor: "#f7f7f7",
         zIndex: "100",
         // color: "white",
       }}
@@ -97,13 +98,31 @@ const Navbar = (onLogoClick) => {
             {/* <Link to="/work" onClick={closeMenu}>
               <Typography className="p-4 nav-link">Work</Typography>
             </Link> */}
-            <Link to="/project" onClick={closeMenu}>
+            <Link
+              to="/project"
+              onClick={() => {
+                onLogoClick();
+                closeMenu();
+              }}
+            >
               <Typography className="p-4 nav-link">Project</Typography>
             </Link>
-            <Link to="/photography" onClick={closeMenu}>
+            <Link
+              to="/photography"
+              onClick={() => {
+                onLogoClick();
+                closeMenu();
+              }}
+            >
               <Typography className="p-4 nav-link">Photography</Typography>
             </Link>
-            <Link to="/about" onClick={closeMenu}>
+            <Link
+              to="/about"
+              onClick={() => {
+                onLogoClick();
+                closeMenu();
+              }}
+            >
               <Typography className="p-4 nav-link">About</Typography>
             </Link>
             {/* </Stack> */}
@@ -132,7 +151,7 @@ const Navbar = (onLogoClick) => {
               aria-describedby="modal-modal-description"
             >
               <Box
-                className="bg-gradient-to-r from-[#3378ff] to-[#9442fe]"
+                className="bg-[#aad0d9]"
                 sx={{
                   position: "absolute",
                   top: "50%",

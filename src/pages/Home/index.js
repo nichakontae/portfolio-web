@@ -4,7 +4,7 @@ import "../../App.css";
 import Pro from "./Pro";
 import Pho from "./Pho";
 
-const Index = ({ onPhotoClick }) => {
+const Index = ({ onPhotoClick, onButtonClick }) => {
   return (
     <>
       <Box
@@ -13,17 +13,17 @@ const Index = ({ onPhotoClick }) => {
           height: "100%",
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          // backgroundColor: "#f7f7f7",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="grid pl-8 z-10 ">
           <Box>
             <hr
               className="md:block hidden"
-              style={{ border: "2px solid #3378ff", width: "7rem" }}
+              style={{ border: "2px solid #aad0d9", width: "7rem" }}
             />
             <Typography className="pt-10">
-              Hi, I'm Eve. I'm a full-stack developer and also photography.
+              Hi, I'm Eve. I'm a full-stack developer and also photographer.
             </Typography>
             <Typography>Welcome to my portfolio !</Typography>
           </Box>
@@ -32,7 +32,7 @@ const Index = ({ onPhotoClick }) => {
               className="md:tracking-tighter tracking-tighterer z-10"
               sx={{
                 fontSize: "clamp(3.5rem , 10vw , 9rem)",
-                color: "#3378ff",
+                color: "#aad0d9",
                 lineHeight: {
                   xs: "3.25rem",
                   md: "7rem",
@@ -69,10 +69,10 @@ const Index = ({ onPhotoClick }) => {
         </Box>
       </Box>
       <Box>
-        <Pro />
+        <Pro onButtonClick={onButtonClick} />
       </Box>
       <Box>
-        <Pho onPhotoClick={onPhotoClick} />
+        <Pho onPhotoClick={onPhotoClick} onButtonClick={onButtonClick} />
       </Box>
     </>
   );

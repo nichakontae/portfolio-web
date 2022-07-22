@@ -5,7 +5,12 @@ const BoxForWork = ({ photo, onPhotoClick }) => {
   return (
     <Box
       className="overflow-hidden transition ease-in-out delay-150 hover:shadow-xs hover:scale-[1.02]  duration-300 relative cursor-pointer"
-      sx={{ borderRadius: "2rem", width: "20rem", height: "24rem" }}
+      sx={{
+        borderRadius: "2rem",
+        width: "20rem",
+        height: "24rem",
+        backgroundColor: "#f7f7f7",
+      }}
       onClick={() => {
         onPhotoClick(photo);
       }}
@@ -25,7 +30,7 @@ const BoxForWork = ({ photo, onPhotoClick }) => {
             //   borderRadius: "10rem",
             width: "10rem",
             height: "10rem",
-            backgroundColor: "rgb(203 213 225)",
+            backgroundColor: "#aad0d9",
           }}
           className="rotate-45 absolute top-[7.5rem] left-[5rem]"
         >

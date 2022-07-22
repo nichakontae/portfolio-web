@@ -25,7 +25,8 @@ const BoxPro = ({ name, source, type, horizontal }) => {
         <Box
           className="flex flex-col items-center"
           sx={{
-            backgroundColor: "rgb(203 213 225)",
+            backgroundColor: "#aad0d9",
+            // opacity: "0.9",
             width: "15rem",
             padding: "1rem 0.5rem",
             // height: "10rem",

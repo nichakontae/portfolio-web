@@ -36,7 +36,8 @@ const index = () => {
                     lineHeight: "2.5rem",
                   }}
                 >
-                  I'm Eve, a full-stack developer and also photography.
+                  <span style={{ color: "#aad0d9" }}> I'm Eve,</span> a
+                  full-stack developer and also photography.
                 </Typography>
                 <Box className="mt-16"></Box>
                 <Typography

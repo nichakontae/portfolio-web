@@ -6,7 +6,7 @@ import SeeAll from "./SeeAll";
 import { Link } from "react-router-dom";
 import { photos } from "../../shared/photos";
 
-const Pho = ({ onPhotoClick }) => {
+const Pho = ({ onPhotoClick, onButtonClick }) => {
   return (
     <>
       <Box
@@ -14,7 +14,7 @@ const Pho = ({ onPhotoClick }) => {
           height: { xs: "100%", xl: "100vh" },
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          // backgroundColor: "#f7f7f7",
+          backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
@@ -62,9 +62,9 @@ const Pho = ({ onPhotoClick }) => {
           </Box>
         </Box>
       </Box>
-      <Box className="pr-8 pl-8">
+      <Box className="pr-8 pl-8" sx={{ backgroundColor: "#f7f7f7" }}>
         <Link to="/photography">
-          <SeeAll />
+          <SeeAll onButtonClick={onButtonClick} />
         </Link>
       </Box>
       {/* <Box>{photoPost}</Box> */}
