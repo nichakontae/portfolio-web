@@ -12,18 +12,21 @@ import { useState, useEffect } from "react";
 import PhotoPost from "./components/PhotoPost";
 import ImageSlider from "./components/ImageSlider";
 import { photos } from "./shared/photos";
+import ProjectDetail from "./components/ProjectDetail";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
   const [selectPhoto, setSelectPhoto] = useState(null);
-
+  const [selectProject, setSelectedProject] = useState(null);
   const onPhotoCloseClick = () => {
     setSelectPhoto(null);
   };
   const onPhotoClick = (photo) => {
     setSelectPhoto(photo);
   };
-
+  const onProjectClick = (proId) => {
+    setSelectedProject(proId);
+  };
   let photoPost = null;
   if (!!selectPhoto) {
     photoPost = <PhotoPost photo={selectPhoto} onBgClick={onPhotoCloseClick} />;
@@ -72,11 +75,13 @@ function App() {
             path="/"
             element={
               <Home onPhotoClick={onPhotoClick} onButtonClick={scrollToTop} />
+              // <ProjectDetail />
             }
           />
           <Route exact path="/about" element={<About />} />
           {/* <Route exact path="/work" element={<Work />} /> */}
           <Route exact path="/project" element={<Project />} />
+          <Route path="/project/:url" element={<ProjectDetail />} />
           <Route
             exact
             path="/photography"

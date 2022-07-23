@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { photos } from "../../shared/photos";
-import BoxForWork from "../BoxForWork";
+import BoxForWork from "../../components/BoxForWork";
 import { Box, Typography } from "@mui/material";
-import PhotoPost from "../../components/PhotoPost";
 
 const Photography = ({ onPhotoClick }) => {
   // const [selectPhoto, setSelectPhoto] = useState(null);

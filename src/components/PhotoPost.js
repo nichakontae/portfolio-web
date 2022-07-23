@@ -12,8 +12,6 @@ const PhotoPost = ({ photo, onBgClick }) => {
     <Box className="photo-post">
       <Box className="photo-post-bg" onClick={onBgClick} />
       <Box className="photo-post-content">
-        <ArrowBackIosIcon className="left-arrow" />
-        <ArrowForwardIosIcon className="right-arrow" />
         <img src={photo.source} alt={photo.name} />
         <Typography className="text">{photo.name}</Typography>
       </Box>

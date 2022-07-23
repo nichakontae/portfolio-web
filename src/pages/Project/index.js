@@ -1,7 +1,8 @@
 import React from "react";
 import { projects } from "../../shared/projects";
-import BoxForWork from "../BoxForWork";
+import BoxForWork from "../../components/BoxForWork";
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
@@ -32,7 +33,9 @@ const index = () => {
           sx={{ backgroundColor: "#f7f7f7" }}
         >
           {projects.map((el) => (
-            <BoxForWork key={el.id} photo={el} />
+            <Link to={`/project/${el.url}`}>
+              <BoxForWork key={el.id} photo={el} />
+            </Link>
           ))}
         </Box>
       </Box>

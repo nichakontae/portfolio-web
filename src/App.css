@@ -50,6 +50,7 @@
 
 .slider {
   position: relative;
+  /* max-width: 1024px; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -58,12 +59,13 @@
 .image {
   border-radius: 10px 10px 0 0;
   max-height: calc(100vh - 120px);
+  max-width: calc(1024px - 10rem);
 }
 .left {
   position: absolute;
   top: 50%;
   /* left: -60px; */
-  left: 32px;
+  left: 0.5rem;
   cursor: pointer;
   user-select: none;
   font-size: 3rem;
@@ -73,7 +75,7 @@
   position: absolute;
   top: 50%;
   /* right: -60px; */
-  right: 32px;
+  right: 0.5rem;
   cursor: pointer;
   user-select: none;
   font-size: 3rem;
