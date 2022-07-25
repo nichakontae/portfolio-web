@@ -38,10 +38,18 @@ const Footer = () => {
         <Typography>BACK TO TOP</Typography>
       </Box> */}
       <Box className="nav-link-footer pr-8">
-        <EmailIcon className="cursor-pointer icon" />
-        <FacebookIcon className="cursor-pointer icon" />
-        <GitHubIcon className="cursor-pointer icon" />
-        <InstagramIcon className="cursor-pointer icon" />
+        <a>
+          <EmailIcon className="cursor-pointer icon" />
+        </a>
+        <a href="https://www.facebook.com/nichakon.e">
+          <FacebookIcon className="cursor-pointer icon" />
+        </a>
+        <a href="https://www.instagram.com/bbeforenseq/">
+          <InstagramIcon className="cursor-pointer icon" />
+        </a>
+        <a href="https://github.com/nichakontae">
+          <GitHubIcon className="cursor-pointer icon" />
+        </a>
       </Box>
     </Box>
   );
