@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../../App.css";
 import Pro from "./Pro";
 import Pho from "./Pho";
+import Skills from "../../components/Skills";
 
 const Index = ({ onPhotoClick, onButtonClick }) => {
   return (
@@ -68,12 +69,14 @@ const Index = ({ onPhotoClick, onButtonClick }) => {
           </Box>
         </Box>
       </Box>
+      {/* <Skills / */}
       <Box>
         <Pro onButtonClick={onButtonClick} />
       </Box>
       <Box>
         <Pho onPhotoClick={onPhotoClick} onButtonClick={onButtonClick} />
       </Box>
+      {/* <Skills /> */}
     </>
   );
 };

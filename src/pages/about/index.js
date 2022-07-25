@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import Skills from "../../components/Skills";
 import Book from "./Book";
 
 const index = () => {
@@ -37,7 +38,7 @@ const index = () => {
                   }}
                 >
                   <span style={{ color: "#aad0d9" }}> I'm Eve,</span> a
-                  full-stack developer and also photography.
+                  full-stack developer and also photographer.
                 </Typography>
                 <Box className="mt-16"></Box>
                 <Typography
@@ -64,6 +65,7 @@ const index = () => {
         </Box>
       </Box>
       {/* สกิลที่มี และ ตอนนี้เรียนอยู่ที่ไหน */}
+      <Skills />
       <Box
         sx={{
           width: "100%",
