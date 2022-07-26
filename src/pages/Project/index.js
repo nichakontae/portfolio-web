@@ -1,10 +1,10 @@
 import React from "react";
 import { projects } from "../../shared/projects";
-import BoxForWork from "../../components/BoxForWork";
+import BoxForPro from "../../components/BoxForPro";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const index = () => {
+const index = ({ onProjectClick }) => {
   return (
     <Box sx={{ height: { xs: "100% ", lg: "100vh" } }}>
       <Box
@@ -33,8 +33,8 @@ const index = () => {
           sx={{ backgroundColor: "#f7f7f7" }}
         >
           {projects.map((el) => (
-            <Link to={`/project/${el.url}`}>
-              <BoxForWork key={el.id} photo={el} />
+            <Link to={`/project/${el.url}`} key={el.id}>
+              <BoxForPro project={el} onProjectClick={onProjectClick} />
             </Link>
           ))}
         </Box>

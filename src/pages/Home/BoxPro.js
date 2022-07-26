@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const BoxPro = ({ name, source, type, horizontal }) => {
+const BoxPro = ({ project, onProjectClick, onButtonClick }) => {
   return (
     <Box className="flex justify-center relative">
       <Box
@@ -11,13 +11,17 @@ const BoxPro = ({ name, source, type, horizontal }) => {
           width: { xs: "100%", md: "80%" },
           borderRadius: "1rem",
         }}
+        onClick={() => {
+          onProjectClick(project.id);
+          onButtonClick();
+        }}
       >
         <img
-          src={source}
-          alt={name}
+          src={project.source}
+          alt={project.name}
           // className="scale-[1]"
           style={{
-            transform: horizontal ? "scale(3.6)" : "scale(3)",
+            transform: project.horizontal ? "scale(3.6)" : "scale(3)",
           }}
         />
       </Box>
@@ -33,8 +37,8 @@ const BoxPro = ({ name, source, type, horizontal }) => {
             borderRadius: "4rem",
           }}
         >
-          <Typography>{name}</Typography>
-          <Typography className="text-gray-500">{type}</Typography>
+          <Typography>{project.name}</Typography>
+          <Typography className="text-gray-500">{project.type}</Typography>
         </Box>
       </Box>
     </Box>

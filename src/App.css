@@ -1,6 +1,10 @@
 .app {
   background-color: #f7f7f7;
 }
+.nav-active {
+  color: #7ac1d1;
+  border-bottom: 4px solid;
+}
 .pimg {
   background: url("/public/assets/images/01.jpg");
   background-size: cover;
@@ -30,11 +34,7 @@
   grid-template-columns: repeat(4, auto);
   gap: 10px;
 }
-.nav-link:hover {
-  /* border-bottom: 3px solid white; */
-  color: #e5b9b6;
-  transition: all 0.2s ease-out;
-}
+
 .nav-link-mobile {
   display: none;
 }

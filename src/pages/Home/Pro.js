@@ -6,7 +6,7 @@ import SeeAll from "./SeeAll";
 import { Link } from "react-router-dom";
 import { projects } from "../../shared/projects";
 
-const Pro = ({ onButtonClick }) => {
+const Pro = ({ onButtonClick, onProjectClick }) => {
   return (
     <>
       <Box className="md:relative -z-10">
@@ -33,13 +33,13 @@ const Pro = ({ onButtonClick }) => {
                   return e.id <= 2;
                 })
                 .map((el) => (
-                  <BoxPro
-                    key={el.id}
-                    name={el.name}
-                    source={el.source}
-                    type={el.type}
-                    horizontal={el.horizontal}
-                  />
+                  <Link to={`/project/${el.url}`} key={el.id}>
+                    <BoxPro
+                      project={el}
+                      onProjectClick={onProjectClick}
+                      onButtonClick={onButtonClick}
+                    />
+                  </Link>
                 ))}
             </Box>
             <Link to="/project">

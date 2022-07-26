@@ -5,7 +5,7 @@ import Pro from "./Pro";
 import Pho from "./Pho";
 import Skills from "../../components/Skills";
 
-const Index = ({ onPhotoClick, onButtonClick }) => {
+const Index = ({ onPhotoClick, onButtonClick, onProjectClick }) => {
   return (
     <>
       <Box
@@ -71,7 +71,7 @@ const Index = ({ onPhotoClick, onButtonClick }) => {
       </Box>
       {/* <Skills / */}
       <Box>
-        <Pro onButtonClick={onButtonClick} />
+        <Pro onButtonClick={onButtonClick} onProjectClick={onProjectClick} />
       </Box>
       <Box>
         <Pho onPhotoClick={onPhotoClick} onButtonClick={onButtonClick} />

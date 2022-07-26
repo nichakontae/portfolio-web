@@ -4,7 +4,8 @@ import ImageSlider from "./ImageSlider";
 import { photos } from "../shared/photos";
 import Group from "./Group";
 
-const ProjectDetail = () => {
+const ProjectDetail = ({ selectProject, projects }) => {
+  const project = projects[selectProject];
   return (
     <Box>
       <img
@@ -14,7 +15,7 @@ const ProjectDetail = () => {
       />
       <Container>
         <Typography variant="h3" className="py-5 text-[#aad0d9]">
-          Project Name
+          {project.name}
         </Typography>
         <Typography>explain about project in few sentence</Typography>
         <Typography>this web app was made from</Typography>

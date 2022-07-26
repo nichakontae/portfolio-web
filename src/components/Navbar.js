@@ -3,7 +3,7 @@ import { Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Fig from "../pages/Fig";
 import "../App.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -63,6 +63,26 @@ const Navbar = (onLogoClick) => {
       );
     }
   };
+  const CustomLink = ({ to, children, ...props }) => {
+    const resolvePath = useResolvedPath(to);
+    const isActive = useMatch({ path: resolvePath.pathname, end: true });
+    return (
+      <Link
+        to={to}
+        onClick={() => {
+          onLogoClick();
+          closeMenu();
+        }}
+        {...props}
+      >
+        <Typography
+          className={isActive ? "p-4 nav-link nav-active" : "p-4 nav-link"}
+        >
+          {children}
+        </Typography>
+      </Link>
+    );
+  };
   return (
     <Box
       className="fixed"
@@ -98,33 +118,10 @@ const Navbar = (onLogoClick) => {
             {/* <Link to="/work" onClick={closeMenu}>
               <Typography className="p-4 nav-link">Work</Typography>
             </Link> */}
-            <Link
-              to="/project"
-              onClick={() => {
-                onLogoClick();
-                closeMenu();
-              }}
-            >
-              <Typography className="p-4 nav-link">Project</Typography>
-            </Link>
-            <Link
-              to="/photography"
-              onClick={() => {
-                onLogoClick();
-                closeMenu();
-              }}
-            >
-              <Typography className="p-4 nav-link">Photography</Typography>
-            </Link>
-            <Link
-              to="/about"
-              onClick={() => {
-                onLogoClick();
-                closeMenu();
-              }}
-            >
-              <Typography className="p-4 nav-link">About</Typography>
-            </Link>
+            <CustomLink to="/project" children="Project" />
+            <CustomLink to="/photography" children="Photography" />
+            <CustomLink to="/about" children="About" />
+
             {/* </Stack> */}
             <Box className="nav-link-mobile">
               <a>
