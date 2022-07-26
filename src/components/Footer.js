@@ -18,7 +18,7 @@ const Footer = () => {
     >
       <Box className="pl-8">
         <Typography>
-          &copy; 2022 nnch. &nbsp; &nbsp;
+          &copy; 2022 ivelse &nbsp; &nbsp;
           <span className="md:inline hidden">ALL RIGHTS RESERVED.</span>
         </Typography>
       </Box>

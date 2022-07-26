@@ -106,7 +106,7 @@ const Navbar = (onLogoClick) => {
         >
           <Link to="/" onClick={onLogoClick}>
             <Typography className="pl-8" variant="h4" onClick={closeMenu}>
-              nnch.
+              ivelse.
             </Typography>
           </Link>
           <Box className="px-8 cursor-pointer md:hidden" onClick={click}>
