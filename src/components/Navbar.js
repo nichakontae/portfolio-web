@@ -191,9 +191,15 @@ const Navbar = (onLogoClick) => {
                     </Typography>
                   </Box>
                   <Box className="flex gap-x-[5rem] md:relative md:top-[10rem]">
-                    <Fig text="facebook" />
-                    <Fig text="instagram" />
-                    <Fig text="github" />
+                    <a href="https://www.facebook.com/nichakon.e">
+                      <Fig text="facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/bbeforenseq/">
+                      <Fig text="instagram" />
+                    </a>
+                    <a href="https://github.com/nichakontae">
+                      <Fig text="github" />
+                    </a>
                   </Box>
                 </Box>
               </Box>
