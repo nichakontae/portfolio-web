@@ -105,9 +105,16 @@ const Navbar = (onLogoClick) => {
           sx={{ height: "100%" }}
         >
           <Link to="/" onClick={onLogoClick}>
-            <Typography className="pl-8" variant="h4" onClick={closeMenu}>
+            <img
+              src="assets/images/logo.png"
+              alt="ivelse"
+              className="pl-8"
+              onClick={closeMenu}
+              style={{ height: "55px" }}
+            />
+            {/* <Typography className="pl-8" variant="h4" onClick={closeMenu}>
               ivelse.
-            </Typography>
+            </Typography> */}
           </Link>
           <Box className="px-8 cursor-pointer md:hidden" onClick={click}>
             {showToggle(toggle)}
