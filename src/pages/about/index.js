@@ -66,7 +66,7 @@ const index = () => {
       </Box>
       {/* สกิลที่มี และ ตอนนี้เรียนอยู่ที่ไหน */}
       <Skills />
-      <Box
+      {/* <Box
         sx={{
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
@@ -76,7 +76,7 @@ const index = () => {
         <Box className="pl-8 pr-8">
           <Book />
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 };

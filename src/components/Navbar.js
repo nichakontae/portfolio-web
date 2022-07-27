@@ -194,7 +194,7 @@ const Navbar = (onLogoClick) => {
                       variant="h1"
                       className="cursor-pointer transition ease-in-out delay-100 no-underline hover:text-white hover:underline duration-300"
                     >
-                      hello@nnch.co
+                      hello@ivelse.co
                     </Typography>
                   </Box>
                   <Box className="flex gap-x-[5rem] md:relative md:top-[10rem]">
