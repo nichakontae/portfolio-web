@@ -13,7 +13,7 @@ const PhotoPost = ({ photo, onBgClick }) => {
       <Box className="photo-post-bg" onClick={onBgClick} />
       <Box className="photo-post-content">
         <img src={photo.source} alt={photo.name} />
-        <Typography className="text">{photo.name}</Typography>
+        <Typography className="photo-text">{photo.name}</Typography>
       </Box>
     </Box>
   );

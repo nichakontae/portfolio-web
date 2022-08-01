@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
 }
+.photo-text {
+  text-align: center;
+  padding: 1rem 0;
+}
 .photo-post-bg {
   /* background: transparent;
   backdrop-filter: blur(4rem); */
