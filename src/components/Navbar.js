@@ -150,7 +150,7 @@ const Navbar = (onLogoClick) => {
             {/* <Link to="/contact"> */}
             <Typography
               onClick={handleOpen}
-              className="cursor-pointer nav-link"
+              className="cursor-pointer nav-link p-4"
             >
               Contact
             </Typography>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import TextHead from "./TextHead";
 import BoxPro from "./BoxPro";
 import SeeAll from "./SeeAll";
@@ -26,7 +26,7 @@ const Pro = ({ onButtonClick, onProjectClick }) => {
         <Box className="pl-8 pt-[8rem] pr-8">
           <TextHead text="Project" />
 
-          <Box>
+          {/* <Box>
             <Box className="grid  md:grid-cols-3 mb-[5rem]">
               {projects
                 .filter((e) => {
@@ -45,7 +45,13 @@ const Pro = ({ onButtonClick, onProjectClick }) => {
             <Link to="/project">
               <SeeAll onButtonClick={onButtonClick} />
             </Link>
-          </Box>
+          </Box> */}
+        </Box>
+        <Box
+          sx={{ width: "100%", height: "18rem" }}
+          className="flex justify-center items-center bg-[#aad0d9] mt-5"
+        >
+          <Typography>Coming Soon</Typography>
         </Box>
       </Box>
     </>
