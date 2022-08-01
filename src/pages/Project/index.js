@@ -15,10 +15,15 @@ const index = ({ onProjectClick }) => {
           backgroundColor: "#f7f7f7",
         }}
       > */}
-      <div class="loader">
-        <div class="loader-inner"></div>
-      </div>
-      <Typography className="text">COMING SOON</Typography>
+      <Box
+        sx={{ width: "100vw" }}
+        className="relative top-[50%] flex flex-col items-center gap-y-5"
+      >
+        <div class="loader">
+          <div class="loader-inner"></div>
+        </div>
+        <Typography className="text">COMING SOON</Typography>
+      </Box>
 
       {/* <Box className="pl-8 pt-[8rem] pr-8">
           <Typography variant="h3" sx={{ color: "black" }}>
