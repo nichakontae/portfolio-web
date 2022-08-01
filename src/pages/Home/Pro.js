@@ -5,6 +5,7 @@ import BoxPro from "./BoxPro";
 import SeeAll from "./SeeAll";
 import { Link } from "react-router-dom";
 import { projects } from "../../shared/projects";
+import "./pro.css";
 
 const Pro = ({ onButtonClick, onProjectClick }) => {
   return (
@@ -49,9 +50,14 @@ const Pro = ({ onButtonClick, onProjectClick }) => {
         </Box>
         <Box
           sx={{ width: "100%", height: "18rem" }}
-          className="flex justify-center items-center bg-[#aad0d9] mt-5"
+          className="flex flex-col justify-center items-center bg-[#aad0d9] mt-5"
         >
-          <Typography>Coming Soon</Typography>
+          <Typography sx={{ fontSize: "1.25rem" }}>Coming Soon</Typography>
+          <Box className="container">
+            <Box className="dot dot1"></Box>
+            <Box className="dot dot2"></Box>
+            <Box className="dot dot3"></Box>
+          </Box>
         </Box>
       </Box>
     </>

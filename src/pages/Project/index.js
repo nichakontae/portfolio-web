@@ -3,18 +3,24 @@ import { projects } from "../../shared/projects";
 import BoxForPro from "../../components/BoxForPro";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import "./projectpage.css";
 
 const index = ({ onProjectClick }) => {
   return (
-    <Box sx={{ height: { xs: "100% ", lg: "100vh" } }}>
-      <Box
+    <Box sx={{ height: "100vh" }}>
+      {/* <Box
         sx={{
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
           backgroundColor: "#f7f7f7",
         }}
-      >
-        <Box className="pl-8 pt-[8rem] pr-8">
+      > */}
+      <div class="loader">
+        <div class="loader-inner"></div>
+      </div>
+      <Typography className="text">COMING SOON</Typography>
+
+      {/* <Box className="pl-8 pt-[8rem] pr-8">
           <Typography variant="h3" sx={{ color: "black" }}>
             Projects
           </Typography>
@@ -22,9 +28,9 @@ const index = ({ onProjectClick }) => {
             className="mt-3"
             style={{ border: "2px solid #aad0d9", width: "7rem" }}
           />
-        </Box>
-      </Box>
-      <Box
+        </Box> */}
+      {/* </Box> */}
+      {/* <Box
         className="pl-8 pt-5 pr-8 pb-[5rem] flex flex-col justify-center items-center"
         sx={{ backgroundColor: "#f7f7f7" }}
       >
@@ -38,7 +44,7 @@ const index = ({ onProjectClick }) => {
             </Link>
           ))}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
