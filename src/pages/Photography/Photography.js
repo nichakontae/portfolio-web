@@ -25,7 +25,7 @@ const Photography = ({ onPhotoClick }) => {
           //   height: { xs: "100% ", lg: "100vh" },
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          backgroundColor: "#f7f7f7",
+          // backgroundColor: "#fff",
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
@@ -34,7 +34,7 @@ const Photography = ({ onPhotoClick }) => {
           </Typography>
           <hr
             className="mt-3"
-            style={{ border: "2px solid #aad0d9", width: "7rem" }}
+            style={{ border: "2px solid #2958b7", width: "7rem" }}
           />
         </Box>
       </Box>

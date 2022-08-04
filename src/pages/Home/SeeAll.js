@@ -9,7 +9,7 @@ const SeeAll = ({ onButtonClick }) => {
       onClick={onButtonClick}
     >
       <Box
-        className="flex items-center cursor-pointer transition ease-in-out delay-150 bg-[#e5b9b6] shadow-md hover:shadow-lg hover:scale-105 duration-300 my-10"
+        className="flex items-center cursor-pointer transition ease-in-out delay-150 bg-[#295bb7] shadow-md hover:shadow-lg hover:scale-105 duration-300 my-10"
         sx={{
           width: { xs: "50rem", md: "20rem" },
           height: "3rem",

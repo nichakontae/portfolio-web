@@ -30,7 +30,7 @@ const BoxForWork = ({ photo, onPhotoClick, onProjectClick, project }) => {
             //   borderRadius: "10rem",
             width: "10rem",
             height: "10rem",
-            backgroundColor: "#aad0d9",
+            backgroundColor: "#96a9cc",
           }}
           className="rotate-45 absolute top-[7.5rem] left-[5rem]"
         >

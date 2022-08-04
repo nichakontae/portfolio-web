@@ -10,18 +10,22 @@ import "./pro.css";
 const Pro = ({ onButtonClick, onProjectClick }) => {
   return (
     <>
-      <Box className="md:relative -z-10">
+      {/* <Box className="md:relative -z-10">
         <Box
           className="md:block hidden md:absolute md:top-[19rem]"
-          sx={{ backgroundColor: "#eed5d1", width: "100%", height: "21rem" }}
+          sx={{
+            backgroundColor: "rgba(92,139,225,0.4)",
+            width: "100%",
+            height: "21rem",
+          }}
         ></Box>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           height: { xs: "100%", lg: "100vh" },
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          backgroundColor: "#f7f7f7",
+          // backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="pl-8 pt-[8rem] pr-8">
@@ -49,8 +53,12 @@ const Pro = ({ onButtonClick, onProjectClick }) => {
           </Box> */}
         </Box>
         <Box
-          sx={{ width: "100%", height: "18rem" }}
-          className="flex flex-col justify-center items-center bg-[#aad0d9] mt-5"
+          sx={{
+            width: "100%",
+            height: "18rem",
+            backgroundColor: "rgba(92,139,225,0.4)",
+          }}
+          className="flex flex-col justify-center items-center mt-5"
         >
           <Typography sx={{ fontSize: "1.25rem" }}>Coming Soon</Typography>
           <Box className="container">

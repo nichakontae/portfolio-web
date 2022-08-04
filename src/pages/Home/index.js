@@ -14,14 +14,14 @@ const Index = ({ onPhotoClick, onButtonClick, onProjectClick }) => {
           height: "100%",
           width: "100%",
           padding: "0rem calc((100vw - 1700px) / 2)",
-          backgroundColor: "#f7f7f7",
+          // backgroundColor: "#f7f7f7",
         }}
       >
         <Box className="grid pl-8 z-10 ">
           <Box>
             <hr
               className="md:block hidden"
-              style={{ border: "2px solid #aad0d9", width: "7rem" }}
+              style={{ border: "2px solid #295bb7", width: "7rem" }}
             />
             <Typography className="pt-10">
               Hi, I'm Eve. I'm a full-stack developer and also photographer.
@@ -33,7 +33,7 @@ const Index = ({ onPhotoClick, onButtonClick, onProjectClick }) => {
               className="md:tracking-tighter tracking-tighterer z-10"
               sx={{
                 fontSize: "clamp(3.5rem , 10vw , 9rem)",
-                color: "#aad0d9",
+                color: "#295bb7",
                 lineHeight: {
                   xs: "3.25rem",
                   md: "7rem",

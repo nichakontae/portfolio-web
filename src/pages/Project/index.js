@@ -31,7 +31,7 @@ const index = ({ onProjectClick }) => {
           </Typography>
           <hr
             className="mt-3"
-            style={{ border: "2px solid #aad0d9", width: "7rem" }}
+            style={{ border: "2px solid #295bb7", width: "7rem" }}
           />
         </Box> */}
       {/* </Box> */}

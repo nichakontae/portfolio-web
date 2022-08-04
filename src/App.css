@@ -1,8 +1,6 @@
-.app {
-  background-color: #f7f7f7;
-}
+/* navbar */
 .nav-active {
-  color: #7ac1d1;
+  color: #295bb7;
   border-bottom: 3px solid;
 }
 .nav-link {
@@ -16,7 +14,7 @@
   height: 3px;
   bottom: -3px;
   left: 0;
-  background-color: #7ac1d1;
+  background-color: #295bb7;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -25,6 +23,25 @@
   visibility: visible;
   transform: scaleX(1);
 }
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+.nav-link-mobile {
+  display: none;
+}
+.nav-link-footer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, auto);
+}
+.icon:hover {
+  color: #f8b944;
+  transition: all 0.3s ease-out;
+}
+
+/* home */
 .pimg {
   background: url("/public/assets/images/01.jpg");
   background-size: cover;
@@ -34,7 +51,7 @@
   bottom: 70px;
   right: 20px;
   font-size: 100px;
-  background: #eed5d1;
+  background: #f8b944;
   /* color: white; */
   cursor: pointer;
   border-radius: 100px;
@@ -45,29 +62,7 @@
   align-items: center;
 }
 
-/* .back-to-top:hover {
-  background: red;
-} */
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 10px;
-}
-
-.nav-link-mobile {
-  display: none;
-}
-.nav-link-footer {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, auto);
-}
-.icon:hover {
-  color: #e5b9b6;
-  transition: all 0.3s ease-out;
-}
-
+/* project page */
 .slider {
   position: relative;
   /* max-width: 1024px; */
@@ -116,7 +111,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: #fff;
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -133,8 +128,8 @@
   .nav-link:hover {
     text-align: center;
     width: 100vw;
-    background-color: #eed5d1;
-    color: black;
+    background-color: #bfd1f2;
+    color: #295bb7;
     transition: all 0.3s ease-out;
   }
   .nav-link-mobile {
@@ -142,8 +137,8 @@
     gap: 10px;
     grid-template-columns: repeat(4, auto);
   }
-  .icon:hover {
-    color: #e5b9b6;
+  /* .icon:hover {
+    color: #f8b944;
     transition: all 0.3s ease-out;
-  }
+  } */
 }

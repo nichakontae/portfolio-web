@@ -92,7 +92,7 @@ const Navbar = (onLogoClick) => {
         padding: "0rem calc((100vw - 1700px) / 2)",
         // background: "#3378ff",
         // backdropFilter: "blur(1rem)",
-        backgroundColor: "#f7f7f7",
+        backgroundColor: "#fff",
         zIndex: "100",
         // color: "white",
       }}
@@ -163,7 +163,7 @@ const Navbar = (onLogoClick) => {
               aria-describedby="modal-modal-description"
             >
               <Box
-                className="bg-[#aad0d9]"
+                className="bg-[#295bb7]"
                 sx={{
                   position: "absolute",
                   top: "50%",
@@ -192,7 +192,7 @@ const Navbar = (onLogoClick) => {
                     <Typography>contact</Typography>
                     <Typography
                       variant="h1"
-                      className="cursor-pointer transition ease-in-out delay-100 no-underline hover:text-white hover:underline duration-300"
+                      className="cursor-pointer text-[#f8b944] transition ease-in-out delay-100 no-underline hover:text-white hover:underline duration-300"
                     >
                       hello@ivelse.co
                     </Typography>

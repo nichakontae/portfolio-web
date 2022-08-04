@@ -13,7 +13,7 @@ const Footer = () => {
       sx={{
         padding: "0rem calc((100vw - 1800px) / 2)",
         height: "5rem",
-        backgroundColor: "#f7f7f7",
+        // backgroundColor: "#f7f7f7",
       }}
     >
       <Box className="pl-8">

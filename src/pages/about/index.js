@@ -37,7 +37,7 @@ const index = () => {
                     lineHeight: "2.5rem",
                   }}
                 >
-                  <span style={{ color: "#aad0d9" }}> I'm Eve,</span> a
+                  <span style={{ color: "#295bb7" }}> I'm Eve,</span> a
                   full-stack developer and also photographer.
                 </Typography>
                 <Box className="mt-16"></Box>
