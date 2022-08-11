@@ -7,7 +7,7 @@ const BoxForWork = ({ photo, onPhotoClick, onProjectClick, project }) => {
       className="overflow-hidden transition ease-in-out delay-150 hover:shadow-xs hover:scale-[1.02]  duration-300 relative cursor-pointer"
       sx={{
         borderRadius: "2rem",
-        width: "20rem",
+        width: { xs: "18.7rem", sm: "20rem" },
         height: "24rem",
         backgroundColor: "#f7f7f7",
       }}
@@ -32,7 +32,7 @@ const BoxForWork = ({ photo, onPhotoClick, onProjectClick, project }) => {
             height: "10rem",
             backgroundColor: "#96a9cc",
           }}
-          className="rotate-45 absolute top-[7.5rem] left-[5rem]"
+          className="rotate-45 absolute  top-[7.5rem] left-[4.5rem] left-sm-[5rem]"
         >
           <Box className="rotate-[-45deg] relative top-[3.5rem] left-[0rem]">
             <Box className="flex flex-col items-center">

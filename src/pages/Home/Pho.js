@@ -34,7 +34,7 @@ const Pho = ({ onPhotoClick, onButtonClick }) => {
                 src={photos[0].source}
                 alt={photos[0].name}
                 style={{
-                  transform: photos[0].horizontal ? "scale(3)" : "scale(1)",
+                  transform: photos[0].horizontal ? "scale(4)" : "scale(1)",
                 }}
               />
             </Box>

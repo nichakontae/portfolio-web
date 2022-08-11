@@ -5,7 +5,7 @@ const TextHead = ({ text }) => {
   return (
     <Box>
       <Typography
-        sx={{ fontSize: "4rem" }}
+        sx={{ fontSize: "clamp(2.5rem, 4vw, 4rem)" }}
         className="pt-5 grid justify-center"
       >
         {text}

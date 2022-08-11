@@ -32,7 +32,7 @@ const Index = ({ onPhotoClick, onButtonClick, onProjectClick }) => {
             <Typography
               className="md:tracking-tighter tracking-tighterer z-10"
               sx={{
-                fontSize: "clamp(3.5rem , 10vw , 9rem)",
+                fontSize: "clamp(2rem , 12vw , 9rem)",
                 color: "#295bb7",
                 lineHeight: {
                   xs: "3.25rem",
@@ -45,7 +45,7 @@ const Index = ({ onPhotoClick, onButtonClick, onProjectClick }) => {
             <Typography
               className="md:tracking-tighter tracking-tighterer z-10"
               sx={{
-                fontSize: "clamp(3.5rem , 10vw , 9rem)",
+                fontSize: "clamp(2rem , 12vw , 9rem)",
 
                 lineHeight: {
                   xs: "3.25rem",
