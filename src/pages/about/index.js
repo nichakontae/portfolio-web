@@ -15,7 +15,7 @@ const index = () => {
         }}
       >
         <Box
-          className="pl-8  pr-8"
+          className="pl-8 pr-8 pt-[5rem] lg:pt-0"
           sx={{ height: "100%", display: "flex", alignItems: "center" }}
         >
           {/* <Box className="grid grid-rows-[1fr_0.5fr] lg:grid-cols-[1fr_2fr] lg:gap-x-[1.5rem] xl:gap-x-[6rem]"> */}
